@@ -1,12 +1,14 @@
 import unittest
-
+from SDTLpy.src.SDTLResult import SDTLResult
+# from src.SDTLResult import SDTLResult
 
 class MyTestCase(unittest.TestCase):
     def test_ctor(self):
-        self.assertEqual(True, False)
-
-    def test_save(self):
-        self.assertEqual(True, False)
+        filename = "testFile.Rmd"
+        sdtl = {}
+        res = SDTLResult(sdtl, filename)
+        self.assertEqual(res.sdtl, sdtl)
+        self.assertEqual(res.filename, filename)
 
 
 if __name__ == '__main__':
