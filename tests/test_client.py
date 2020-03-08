@@ -1,9 +1,6 @@
 import unittest
-from unittest import mock
 import responses
-from src.SDTLClient import SDTLClient
-
-
+from SDTLpy.src.SDTLClient import SDTLClient
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
