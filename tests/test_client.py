@@ -22,7 +22,6 @@ class MyTestCase(unittest.TestCase):
         res = self.client.results[0]
         self.assertEqual(res.filename, filename)
         self.assertEqual(res.sdtl, sdtl)
-        self.assertEqual(True, False)
 
 
 if __name__ == '__main__':
