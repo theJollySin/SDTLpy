@@ -6,7 +6,7 @@ install:
 script:
   pytest
 after_success:
-  - coveralls
+  - codecov
 branches:
   only:
     - master
