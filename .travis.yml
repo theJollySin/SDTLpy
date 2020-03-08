@@ -7,7 +7,7 @@ install:
   - pip3 install pyflakes
 
 script:
-  - pytest --cov=codecov --cov-report=xml
+  - pytest --cov=SDTLpy --cov-report=xml tests/
   - python3 -m pyflakes
 after_success:
   - bash < (curl -s https://codecov.io/bash)
