@@ -4,10 +4,10 @@ python:
 install:
   - pip install -r requirements.txt
   - pip install pytest-cov
+  - pip3 install pyflakes
+
 script:
-  pytest --cov=codecov
+  - pytest --cov=codecov --cov-report=xml
+  - python3 -m pyflakes
 after_success:
   - bash < (curl -s https://codecov.io/bash)
-branches:
-  only:
-    - master
