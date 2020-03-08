@@ -1,6 +1,6 @@
 import requests
 from pathlib import Path
-from typing import Union
+from typing import Union, List
 
 from .SDTLResult import SDTLResult
 
@@ -25,9 +25,9 @@ class SDTLClient:
         :param endpoint_url: The SDTL API endpoint
         """
         self.endpoint_url: str = endpoint_url
-        self.results: SDTLResult = []
-        self.input_files: Path = []
-        self.input_directories: Path = []
+        self.results: List[SDTLResult] = []
+        self.input_files: List[Path] = []
+        self.input_directories: List[Path] = []
 
     def add_file(self, file_path: Union[str, Path]) -> None:
         """
@@ -48,7 +48,7 @@ class SDTLClient:
         :return: None
         """
         if isinstance(directory_path, str):
-            directory_path=Path(directory_path)
+            directory_path = Path(directory_path)
         self.input_directories.append(directory_path)
 
     def transform(self) -> None:
@@ -57,14 +57,14 @@ class SDTLClient:
         results are saved into Result objects.
         :return: None
         """
-        for directory in self.directories:
+        for directory in self.input_directories:
             for file in directory.glob('**/*'):
                 sdtl = self.get_sdtl(file)
-                self.add_result(SDTLResult(sdtl, file))
+                self.add_result(SDTLResult(sdtl, file.name))
 
         for file in self.input_files:
             sdtl = self.get_sdtl(file)
-            self.add_result(SDTLResult(sdtl, file))
+            self.add_result(SDTLResult(sdtl, file.name))
 
     def get_sdtl(self, file: Path) -> dict:
         """

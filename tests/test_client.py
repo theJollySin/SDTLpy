@@ -1,6 +1,8 @@
 import unittest
 import responses
 from SDTLpy.src.SDTLClient import SDTLClient
+
+
 class MyTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -39,6 +41,7 @@ class MyTestCase(unittest.TestCase):
 
     def test_reset(self):
         self.assertEqual(True, False)
+
 
 if __name__ == '__main__':
     unittest.main()
