@@ -9,7 +9,7 @@ install:
 script:
   - coverage run -m unittest discover
 #  - coverage run tests/test_SDTLResult.py tests/test_client.py
-  - python3 -m pyflakes
+#  - python3 -m pyflakes
 after_success:
   - codecov
   - bash <(curl -s https://codecov.io/bash)
