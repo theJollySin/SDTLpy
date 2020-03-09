@@ -1,6 +1,6 @@
 import unittest
-from SDTLpy.src.SDTLResult import SDTLResult
-# from src.SDTLResult import SDTLResult
+#from SDTLpy.src.SDTLResult import SDTLResult
+from src.SDTLResult import SDTLResult
 
 class MyTestCase(unittest.TestCase):
     def test_ctor(self):
