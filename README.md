@@ -1,6 +1,6 @@
 # SDTLpy
 [![Build Status](https://travis-ci.org/ThomasThelen/SDTLpy.svg?branch=master)](https://travis-ci.org/ThomasThelen/SDTLpy)
-[![Coverage Status](https://coveralls.io/repos/github/ThomasThelen/SDTLpy/badge.svg?branch=master)](https://coveralls.io/github/ThomasThelen/SDTLpy?branch=master)
+[![codecov](https://codecov.io/gh/ThomasThelen/SDTLpy/branch/master/graph/badge.svg)](https://codecov.io/gh/ThomasThelen/SDTLpy)
 [![Python 3.8](https://img.shields.io/badge/python-3.8-blue.svg)]()
 
 Python library for generating SDTL via C2Metadata deployments
