@@ -7,7 +7,7 @@ install:
   - pip3 install pyflakes
 
 script:
-  - coverage run tests\test_SDTLResult.py tests\test_client.py
+  - coverage run tests/test_SDTLResult.py tests/test_client.py
   - python3 -m pyflakes
 after_success:
   - codecov
