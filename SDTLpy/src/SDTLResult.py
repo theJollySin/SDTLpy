@@ -8,7 +8,7 @@ class SDTLResult:
     Class that holds the SDTL for a particular file.
     """
 
-    def __init__(self, sdtl: json, filename: str) -> None:
+    def __init__(self, sdtl: dict, filename: str) -> None:
         """
         Create an SDTL result.
         :param sdtl:

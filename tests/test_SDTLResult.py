@@ -5,7 +5,7 @@ class MyTestCase(unittest.TestCase):
     def test_ctor(self):
         filename = "testFile.Rmd"
         sdtl = {}
-        res = SDTLResult(sdtl, filename)
+        res = SDTLResult.SDTLResult(sdtl, filename)
         self.assertEqual(res.sdtl, sdtl)
         self.assertEqual(res.filename, filename)
 
