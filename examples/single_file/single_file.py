@@ -1,4 +1,4 @@
-from src.SDTLClient import SDTLClient
+from SDTLpy.src.SDTLClient import SDTLClient
 from pathlib import Path
 
 script_file = Path('./script.sass')

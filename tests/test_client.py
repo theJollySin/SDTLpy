@@ -1,7 +1,5 @@
 import unittest
-import responses
-import sys
-from ..src.SDTLClient import SDTLClient
+from SDTLpy.src.SDTLClient import SDTLClient
 
 class MyTestCase(unittest.TestCase):
 
